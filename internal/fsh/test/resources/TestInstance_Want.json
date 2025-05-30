@@ -1,0 +1,360 @@
+{
+  "valueSets": null,
+  "profiles": null,
+  "codeSystems": null,
+  "instances": [
+    {
+      "name": {
+        "value": "VerilySearchParameterInstanceExample",
+        "location": {
+          "start": {
+            "lineNumber": 1,
+            "columnNumber": 10
+          },
+          "end": {
+            "lineNumber": 1,
+            "columnNumber": 10
+          }
+        }
+      },
+      "instanceOf": {
+        "value": "SearchParameter",
+        "location": {
+          "start": {
+            "lineNumber": 2,
+            "columnNumber": 12
+          },
+          "end": {
+            "lineNumber": 2,
+            "columnNumber": 12
+          }
+        }
+      },
+      "title": {
+        "value": "Instance Title",
+        "location": {
+          "start": {
+            "lineNumber": 3,
+            "columnNumber": 0
+          },
+          "end": {
+            "lineNumber": 3,
+            "columnNumber": 7
+          }
+        }
+      },
+      "description": {
+        "value": "This is a description.",
+        "location": {
+          "start": {
+            "lineNumber": 5,
+            "columnNumber": 0
+          },
+          "end": {
+            "lineNumber": 5,
+            "columnNumber": 13
+          }
+        }
+      },
+      "usage": {
+        "value": "#definition",
+        "location": {
+          "start": {
+            "lineNumber": 4,
+            "columnNumber": 0
+          },
+          "end": {
+            "lineNumber": 4,
+            "columnNumber": 7
+          }
+        }
+      },
+      "instanceRules": {
+        "assignmentRules": [
+          {
+            "element": {
+              "value": "url",
+              "location": {
+                "start": {
+                  "lineNumber": 8,
+                  "columnNumber": 2
+                },
+                "end": {
+                  "lineNumber": 8,
+                  "columnNumber": 2
+                }
+              }
+            },
+            "value": {
+              "value": "http://fhir.example.com/oneverily/SearchParameter/test-parameter",
+              "location": {
+                "start": {
+                  "lineNumber": 8,
+                  "columnNumber": 8
+                },
+                "end": {
+                  "lineNumber": 8,
+                  "columnNumber": 8
+                }
+              }
+            },
+            "exactly": {
+              "value": false,
+              "location": null
+            }
+          },
+          {
+            "element": {
+              "value": "name",
+              "location": {
+                "start": {
+                  "lineNumber": 9,
+                  "columnNumber": 2
+                },
+                "end": {
+                  "lineNumber": 9,
+                  "columnNumber": 2
+                }
+              }
+            },
+            "value": {
+              "value": "TestParameter",
+              "location": {
+                "start": {
+                  "lineNumber": 9,
+                  "columnNumber": 9
+                },
+                "end": {
+                  "lineNumber": 9,
+                  "columnNumber": 9
+                }
+              }
+            },
+            "exactly": {
+              "value": false,
+              "location": null
+            }
+          },
+          {
+            "element": {
+              "value": "status",
+              "location": {
+                "start": {
+                  "lineNumber": 10,
+                  "columnNumber": 2
+                },
+                "end": {
+                  "lineNumber": 10,
+                  "columnNumber": 2
+                }
+              }
+            },
+            "value": {
+              "value": "#active",
+              "location": {
+                "start": {
+                  "lineNumber": 10,
+                  "columnNumber": 11
+                },
+                "end": {
+                  "lineNumber": 10,
+                  "columnNumber": 11
+                }
+              }
+            },
+            "exactly": {
+              "value": false,
+              "location": null
+            }
+          },
+          {
+            "element": {
+              "value": "expression",
+              "location": {
+                "start": {
+                  "lineNumber": 11,
+                  "columnNumber": 2
+                },
+                "end": {
+                  "lineNumber": 11,
+                  "columnNumber": 2
+                }
+              }
+            },
+            "value": {
+              "value": "\nResearchStudy.extension('http://fhir.example.com/StructureDefinition/test-parameter').extension('artifact-canonicalReference').valueCanonical |\nHealthcareService.extension('http://fhir.example.com/StructureDefinition/test-parameter').extension('artifact-canonicalReference').valueCanonical\n",
+              "location": {
+                "start": {
+                  "lineNumber": 11,
+                  "columnNumber": 15
+                },
+                "end": {
+                  "lineNumber": 11,
+                  "columnNumber": 15
+                }
+              }
+            },
+            "exactly": {
+              "value": false,
+              "location": null
+            }
+          },
+          {
+            "element": {
+              "value": "target[0]",
+              "location": {
+                "start": {
+                  "lineNumber": 15,
+                  "columnNumber": 2
+                },
+                "end": {
+                  "lineNumber": 15,
+                  "columnNumber": 2
+                }
+              }
+            },
+            "value": {
+              "value": "#PlanDefinition",
+              "location": {
+                "start": {
+                  "lineNumber": 15,
+                  "columnNumber": 14
+                },
+                "end": {
+                  "lineNumber": 15,
+                  "columnNumber": 14
+                }
+              }
+            },
+            "exactly": {
+              "value": false,
+              "location": null
+            }
+          }
+        ],
+        "insertRules": [
+          {
+            "path": null,
+            "ruleSetName": {
+              "value": "RuleSet1",
+              "location": {
+                "start": {
+                  "lineNumber": 17,
+                  "columnNumber": 0
+                },
+                "end": {
+                  "lineNumber": 18,
+                  "columnNumber": 8
+                }
+              }
+            },
+            "parameters": []
+          },
+          {
+            "path": {
+              "value": "path",
+              "location": {
+                "start": {
+                  "lineNumber": 19,
+                  "columnNumber": 2
+                },
+                "end": {
+                  "lineNumber": 19,
+                  "columnNumber": 2
+                }
+              }
+            },
+            "ruleSetName": {
+              "value": "RuleSet2",
+              "location": {
+                "start": {
+                  "lineNumber": 18,
+                  "columnNumber": 17
+                },
+                "end": {
+                  "lineNumber": 19,
+                  "columnNumber": 13
+                }
+              }
+            },
+            "parameters": []
+          },
+          {
+            "path": null,
+            "ruleSetName": {
+              "value": "RuleSet3",
+              "location": {
+                "start": {
+                  "lineNumber": 20,
+                  "columnNumber": 8
+                },
+                "end": {
+                  "lineNumber": 20,
+                  "columnNumber": 34
+                }
+              }
+            },
+            "parameters": [
+              {
+                "value": "param1",
+                "location": {
+                  "start": {
+                    "lineNumber": 20,
+                    "columnNumber": 19
+                  },
+                  "end": {
+                    "lineNumber": 20,
+                    "columnNumber": 19
+                  }
+                }
+              },
+              {
+                "value": "param2",
+                "location": {
+                  "start": {
+                    "lineNumber": 20,
+                    "columnNumber": 26
+                  },
+                  "end": {
+                    "lineNumber": 20,
+                    "columnNumber": 26
+                  }
+                }
+              },
+              {
+                "value": "[[param3]]",
+                "location": {
+                  "start": {
+                    "lineNumber": 20,
+                    "columnNumber": 34
+                  },
+                  "end": {
+                    "lineNumber": 20,
+                    "columnNumber": 34
+                  }
+                }
+              }
+            ]
+          }
+        ],
+        "pathRules": [
+          {
+            "path": {
+              "value": "somePath",
+              "location": {
+                "start": {
+                  "lineNumber": 23,
+                  "columnNumber": 2
+                },
+                "end": {
+                  "lineNumber": 23,
+                  "columnNumber": 2
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,153 @@
+{
+  "valueSets": null,
+  "profiles": null,
+  "codeSystems": [
+    {
+      "name": {
+        "value": "TestCodeSystem_CS",
+        "location": {
+          "start": {
+            "lineNumber": 1,
+            "columnNumber": 12
+          },
+          "end": {
+            "lineNumber": 1,
+            "columnNumber": 12
+          }
+        }
+      },
+      "id": {
+        "value": "test-code-system",
+        "location": {
+          "start": {
+            "lineNumber": 2,
+            "columnNumber": 12
+          },
+          "end": {
+            "lineNumber": 2,
+            "columnNumber": 12
+          }
+        }
+      },
+      "title": {
+        "value": "Test Code System",
+        "location": {
+          "start": {
+            "lineNumber": 3,
+            "columnNumber": 0
+          },
+          "end": {
+            "lineNumber": 3,
+            "columnNumber": 11
+          }
+        }
+      },
+      "description": {
+        "value": "This is a code system description.",
+        "location": {
+          "start": {
+            "lineNumber": 4,
+            "columnNumber": 0
+          },
+          "end": {
+            "lineNumber": 4,
+            "columnNumber": 13
+          }
+        }
+      },
+      "concepts": [
+        {
+          "name": {
+            "value": "#concept-one",
+            "location": {
+              "start": {
+                "lineNumber": 4,
+                "columnNumber": 49
+              },
+              "end": {
+                "lineNumber": 8,
+                "columnNumber": 4
+              }
+            }
+          },
+          "display": {
+            "value": "Concept One Display",
+            "location": {
+              "start": {
+                "lineNumber": 4,
+                "columnNumber": 49
+              },
+              "end": {
+                "lineNumber": 8,
+                "columnNumber": 4
+              }
+            }
+          },
+          "definition": {
+            "value": "This is the definition of concept one.",
+            "location": {
+              "start": {
+                "lineNumber": 4,
+                "columnNumber": 49
+              },
+              "end": {
+                "lineNumber": 8,
+                "columnNumber": 4
+              }
+            }
+          },
+          "subConcepts": [
+            {
+              "name": {
+                "value": "#concept-two",
+                "location": {
+                  "start": {
+                    "lineNumber": 8,
+                    "columnNumber": 44
+                  },
+                  "end": {
+                    "lineNumber": 10,
+                    "columnNumber": 4
+                  }
+                }
+              },
+              "display": {
+                "value": "Concept Two Display",
+                "location": {
+                  "start": {
+                    "lineNumber": 8,
+                    "columnNumber": 44
+                  },
+                  "end": {
+                    "lineNumber": 10,
+                    "columnNumber": 4
+                  }
+                }
+              },
+              "definition": null,
+              "subConcepts": []
+            }
+          ]
+        },
+        {
+          "name": {
+            "value": "#concept-three",
+            "location": {
+              "start": {
+                "lineNumber": 10,
+                "columnNumber": 25
+              },
+              "end": {
+                "lineNumber": 11,
+                "columnNumber": 2
+              }
+            }
+          },
+          "display": null,
+          "definition": null,
+          "subConcepts": []
+        }
+      ]
+    }
+  ]
+}

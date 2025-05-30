@@ -1,0 +1,278 @@
+# yaml-language-server: $schema=https://json.schemastore.org/github-workflow.json
+name: Release
+
+on:
+  push:
+    branches:
+      - main
+    tags:
+      - v*
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref_name }}
+  cancel-in-progress: true
+
+permissions:
+  # Required to write the release artifacts
+  contents: write
+
+  # Required for producing attestation statements
+  attestations: write
+
+  # Required for writing GHCR images
+  packages: write
+
+  # Required for modifying the token
+  id-token: write
+
+jobs:
+  release-binaries:
+    name: Release ${{ github.ref_name }} Binaries
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    outputs:
+      jobs: ${{ steps.create-jobs.outputs.jobs }}
+      project-name: ${{ steps.metadata.outputs.project-name }}
+      artifact-id: ${{ steps.release-artifact.outputs.artifact-id }}
+      artifact-url: ${{ steps.release-artifact.outputs.artifact-url }}
+      artifact-name: release-assets
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Go
+        uses: actions/setup-go@v5
+        with:
+          go-version-file: go.mod
+
+      - name: Setup CyloneDX-Gomod
+        run: |
+          go install github.com/CycloneDX/cyclonedx-gomod/cmd/cyclonedx-gomod@latest
+
+      - name: Create Release
+        if: github.event_name == 'push' && github.ref_name != 'main'
+        uses: goreleaser/goreleaser-action@v5
+        with:
+          distribution: goreleaser
+          version: "~> v1"
+          args: release --clean
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+
+      - name: Create Snapshot Release
+        if: github.event_name == 'push' && github.ref_name == 'main'
+        uses: goreleaser/goreleaser-action@v5
+        with:
+          distribution: goreleaser
+          version: "~> v1"
+          args: release --clean --snapshot
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+
+      - name: Read metadata
+        id: metadata
+        run: |
+          dist=$(yq '.dist // "dist"' .goreleaser.yaml)
+          dist=$(cd ${dist}; pwd)
+          sbom_configured=$(yq e '. | has("sboms")' .goreleaser.yaml)
+          project_name=$(cat "${dist}/metadata.json" | jq -r '.project_name')
+          echo "dist=${dist}" >> "${GITHUB_OUTPUT}"
+          echo "project-name=${project_name}" >> "${GITHUB_OUTPUT}"
+
+      # The created artifacts contain both directories that have the binaries
+      # as well as archives that contain the same content. Remove the duplicate
+      # directories.
+      #
+      # Additionally, the generated config.yaml file may contain substitutions
+      # which can potentially leak information about the certificates that will
+      # be used for code-signing in the future.
+      - name: Clean up Release
+        run: |
+          dist="${{steps.metadata.outputs.dist}}"
+          find "${dist}" -mindepth 1 -maxdepth 1 -type d -exec rm -rf {} \;
+          rm -f ${dist}/{*.txt,config.yaml,artifacts.json,metadata.json}
+
+      - name: Upload Artifacts
+        uses: actions/upload-artifact@v4
+        id: release-artifact
+        with:
+          name: release-assets
+          path: ${{steps.metadata.outputs.dist}}/*
+          retention-days: 1
+
+      - name: Create Attestation Jobs
+        id: create-jobs
+        run: |
+          dist="${{steps.metadata.outputs.dist}}"
+          tar_archives=$(find "${dist}" -type f -name '*.tar.gz' -exec basename {} ".tar.gz" \;)
+          zip_archives=$(find "${dist}" -type f -name '*.zip' -exec basename {} ".zip" \;)
+          job_names=$(echo ${tar_archives} ${zip_archives})
+          job_names=$(echo ${job_names} | sort -u | jq -R -s -c 'split(" ")[:-1]')
+          echo $job_names
+          echo "jobs=${job_names}" >> "${GITHUB_OUTPUT}"
+
+  release-container:
+    name: Deploy to Container Registry
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Determine latest release
+        id: latest
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          tag=$(gh release view --json tagName --jq .tagName || true)
+          echo "tag=${tag}" >> "${GITHUB_OUTPUT}"
+
+      - name: Determine Image References
+        id: image-info
+        run: |
+          image_name="ghcr.io/${{ github.repository }}"
+
+          image_references=""
+          # Extract ref prefix for versions and cut the 'v' prefix
+          if [[ "${{ github.ref }}" == "refs/tags/${{ steps.latest.outputs.tag }}" ]]; then
+            version=$(echo "${{ steps.latest.outputs.tag }}" | sed -e 's@^v@@')
+            image_references="${image_name}:${version}"
+            image_references+=$'\n'
+            image_references+="${image_name}:latest"
+          elif [[ "${{ github.ref }}" == "refs/tags/v"* ]]; then
+            version=$(echo "${{ github.ref }}" | sed -e 's@^refs/tags/v@@')
+            image_references="${image_name}:${version}"
+          else
+            version=$(echo "${{ github.ref }}" | sed -e 's@.*/\(.*\)@\1@')
+            image_references="${image_name}:${version}"
+          fi
+
+          {
+            echo "image-name=${image_name}"
+            echo "image-references<<EOF"
+            echo "${image_references}"
+            echo "EOF"
+          } >> "${GITHUB_OUTPUT}"
+
+      - name: Login to Registry
+        id: login
+        uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ github.token }}
+
+      - name: Collect label information
+        id: label
+        run: |
+          echo "url=${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}" >> "${GITHUB_OUTPUT}"
+          echo "repo=${{ github.event.repository.name }}" >> "${GITHUB_OUTPUT}"
+          echo "owner=${{ github.repository_owner }}" >> "${GITHUB_OUTPUT}"
+          echo "timestamp=$(date -u +'%Y-%m-%dT%H:%M:%SZ')" >> "${GITHUB_OUTPUT}"
+
+      - name: Build and push image
+        id: push
+        uses: docker/build-push-action@v5.0.0
+        with:
+          context: .
+          push: true
+          tags: |
+            ${{ steps.image-info.outputs.image-references }}
+          labels: |
+            org.opencontainers.image.ref.name=${{ github.ref_name}}
+            org.opencontainers.image.vendor=Verily Life Sciences
+            org.opencontainers.image.title=fsh-lint
+            org.opencontainers.image.licenses=${{ github.event.repository.license }}
+            org.opencontainers.image.description=${{ github.event.repository.description }}
+            org.opencontainers.image.documentation=
+            org.opencontainers.image.url=${{ steps.label.outputs.url }}
+            org.opencontainers.image.source=${{ steps.label.outputs.url }}
+            org.opencontainers.image.created=${{ steps.label.outputs.timestamp }}
+
+      - name: Attest Build Provenance
+        uses: actions/attest-build-provenance@v1
+        id: attest
+        with:
+          subject-name: ${{ steps.image-info.outputs.image-name }}
+          subject-digest: ${{ steps.push.outputs.digest }}
+          push-to-registry: true
+          github-token: ${{ github.token }}
+
+  # The actions/attest API doesn't make it easy to attest SBOM provenance and
+  # associate it with a specific build if it's being globbed. An unfortunate
+  # consequence of that is that the only way to do this is to unroll the
+  # attestation so that it's done individually per step. This either means
+  # itemizing it N times, which is ugly -- or to use a matrix strategy to
+  # attest them all; which is easier to maintain, but requires downloading the
+  # created artifact. It's not ideal, but it's better than nothing.
+  attest-release-binaries:
+    name: Attest Provenance
+    if: ${{ needs.release-binaries.outputs.jobs != '[]' }}
+    runs-on: ubuntu-latest
+    needs: [release-binaries]
+    strategy:
+      matrix:
+        job: ${{ fromJson(needs.release-binaries.outputs.jobs) }}
+    permissions:
+      attestations: write
+      id-token: write
+
+    steps:
+      - name: Download Release Assets
+        uses: actions/download-artifact@v4
+        with:
+          name: ${{ needs.release-binaries.outputs.artifact-name }}
+
+      - name: Print Asset Contents
+        run: ls -l
+
+      - name: Unarchive Assets
+        id: unarchive
+        run: |
+          if [[ -f "${{ matrix.job }}.zip" ]]; then
+            unzip -q "${{ matrix.job }}.zip"
+            if [[ -d "${{ matrix.job }}" ]]; then
+              echo "subject-path=${{ matrix.job }}/${{ needs.release-binaries.outputs.project-name }}.exe" >> "${GITHUB_OUTPUT}"
+            else
+              echo "subject-path=${{ needs.release-binaries.outputs.project-name }}.exe" >> "${GITHUB_OUTPUT}"
+            fi
+          elif [[ -f "${{ matrix.job }}.tar.gz" ]]; then
+            tar -xzf "${{ matrix.job }}.tar.gz"
+            if [[ -d "${{ matrix.job }}" ]]; then
+              echo "subject-path=${{ matrix.job }}/${{ needs.release-binaries.outputs.project-name }}" >> "${GITHUB_OUTPUT}"
+            else
+              echo "subject-path=${{ needs.release-binaries.outputs.project-name }}" >> "${GITHUB_OUTPUT}"
+            fi
+          else
+            echo "::error::Failed to find artifact for ${{ matrix.job }}"
+            exit 1
+          fi
+
+          # Conditionally set the SBOM path if the JSON file exists.
+          if [[ -f "${{ matrix.job }}.bom.json" ]]; then
+            echo "sbom-path=${{ matrix.job }}.bom.json" >> "${GITHUB_OUTPUT}"
+          fi
+
+          # Massage the name into something a bit easier to read
+          name=$(echo "${{ matrix.job }}" | sed "s@_@-@g" | sed "s@x86-64@x86_64@g")
+          name=$(echo "${name}" | sed "s@-SNAPSHOT@@g")
+          echo "subject-name=${name}" >> "${GITHUB_OUTPUT}"
+
+      - name: Attest SBOM provenance
+        if: steps.unarchive.outputs.sbom-path != ''
+        id: sbom
+        uses: actions/attest-sbom/predicate@v1
+        with:
+          sbom-path: ${{ steps.unarchive.outputs.sbom-path}}
+
+      - name: Attest build provenance
+        if: steps.unarchive.outputs.subject-path != ''
+        uses: actions/attest@v1
+        with:
+          subject-path: "${{ steps.unarchive.outputs.subject-path }}"
+          subject-name: "${{ steps.unarchive.outputs.subject-name }}"
+          predicate-type: ${{ steps.sbom.outputs.predicate-type }}
+          predicate-path: ${{ steps.sbom.outputs.predicate-path }}
