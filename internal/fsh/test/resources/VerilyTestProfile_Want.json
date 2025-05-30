@@ -1,0 +1,1808 @@
+{
+  "valueSets": null,
+  "profiles": [
+    {
+      "name": {
+        "value": "VerilyTestProfile",
+        "location": {
+          "start": {
+            "lineNumber": 1,
+            "columnNumber": 9
+          },
+          "end": {
+            "lineNumber": 1,
+            "columnNumber": 9
+          }
+        }
+      },
+      "parent": {
+        "value": "TestParent",
+        "location": {
+          "start": {
+            "lineNumber": 2,
+            "columnNumber": 0
+          },
+          "end": {
+            "lineNumber": 2,
+            "columnNumber": 8
+          }
+        }
+      },
+      "id": {
+        "value": "verily-test-profile",
+        "location": {
+          "start": {
+            "lineNumber": 3,
+            "columnNumber": 4
+          },
+          "end": {
+            "lineNumber": 3,
+            "columnNumber": 4
+          }
+        }
+      },
+      "title": {
+        "value": "Verily Test Profile",
+        "location": {
+          "start": {
+            "lineNumber": 4,
+            "columnNumber": 0
+          },
+          "end": {
+            "lineNumber": 4,
+            "columnNumber": 7
+          }
+        }
+      },
+      "description": {
+        "value": "This is a profile description.",
+        "location": {
+          "start": {
+            "lineNumber": 5,
+            "columnNumber": 0
+          },
+          "end": {
+            "lineNumber": 5,
+            "columnNumber": 13
+          }
+        }
+      },
+      "profileRules": {
+        "cardRules": [
+          {
+            "Element": {
+              "value": "field",
+              "location": {
+                "start": {
+                  "lineNumber": 9,
+                  "columnNumber": 2
+                },
+                "end": {
+                  "lineNumber": 9,
+                  "columnNumber": 2
+                }
+              }
+            },
+            "Cardinality": {
+              "min": {
+                "value": 1,
+                "location": {
+                  "start": {
+                    "lineNumber": 8,
+                    "columnNumber": 0
+                  },
+                  "end": {
+                    "lineNumber": 9,
+                    "columnNumber": 15
+                  }
+                }
+              },
+              "max": {
+                "value": 123,
+                "location": {
+                  "start": {
+                    "lineNumber": 8,
+                    "columnNumber": 0
+                  },
+                  "end": {
+                    "lineNumber": 9,
+                    "columnNumber": 15
+                  }
+                }
+              }
+            },
+            "Flags": {
+              "mustSupport": {
+                "value": true,
+                "location": {
+                  "start": {
+                    "lineNumber": 9,
+                    "columnNumber": 15
+                  },
+                  "end": {
+                    "lineNumber": 9,
+                    "columnNumber": 15
+                  }
+                }
+              },
+              "includeInSummary": {
+                "value": false,
+                "location": null
+              },
+              "modifier": {
+                "value": false,
+                "location": null
+              },
+              "normative": {
+                "value": false,
+                "location": null
+              },
+              "trialUse": {
+                "value": false,
+                "location": null
+              },
+              "draft": {
+                "value": false,
+                "location": null
+              }
+            }
+          },
+          {
+            "Element": {
+              "value": "field2",
+              "location": {
+                "start": {
+                  "lineNumber": 10,
+                  "columnNumber": 2
+                },
+                "end": {
+                  "lineNumber": 10,
+                  "columnNumber": 2
+                }
+              }
+            },
+            "Cardinality": {
+              "min": null,
+              "max": {
+                "value": 123,
+                "location": {
+                  "start": {
+                    "lineNumber": 9,
+                    "columnNumber": 17
+                  },
+                  "end": {
+                    "lineNumber": 10,
+                    "columnNumber": 15
+                  }
+                }
+              }
+            },
+            "Flags": {
+              "mustSupport": {
+                "value": true,
+                "location": {
+                  "start": {
+                    "lineNumber": 10,
+                    "columnNumber": 15
+                  },
+                  "end": {
+                    "lineNumber": 10,
+                    "columnNumber": 15
+                  }
+                }
+              },
+              "includeInSummary": {
+                "value": false,
+                "location": null
+              },
+              "modifier": {
+                "value": false,
+                "location": null
+              },
+              "normative": {
+                "value": false,
+                "location": null
+              },
+              "trialUse": {
+                "value": false,
+                "location": null
+              },
+              "draft": {
+                "value": false,
+                "location": null
+              }
+            }
+          },
+          {
+            "Element": {
+              "value": "field2",
+              "location": {
+                "start": {
+                  "lineNumber": 11,
+                  "columnNumber": 2
+                },
+                "end": {
+                  "lineNumber": 11,
+                  "columnNumber": 2
+                }
+              }
+            },
+            "Cardinality": {
+              "min": {
+                "value": 123,
+                "location": {
+                  "start": {
+                    "lineNumber": 10,
+                    "columnNumber": 17
+                  },
+                  "end": {
+                    "lineNumber": 11,
+                    "columnNumber": 9
+                  }
+                }
+              },
+              "max": null
+            },
+            "Flags": {
+              "mustSupport": {
+                "value": false,
+                "location": null
+              },
+              "includeInSummary": {
+                "value": false,
+                "location": null
+              },
+              "modifier": {
+                "value": false,
+                "location": null
+              },
+              "normative": {
+                "value": false,
+                "location": null
+              },
+              "trialUse": {
+                "value": false,
+                "location": null
+              },
+              "draft": {
+                "value": false,
+                "location": null
+              }
+            }
+          }
+        ],
+        "flagRules": [
+          {
+            "Elements": [
+              {
+                "value": "someElement",
+                "location": {
+                  "start": {
+                    "lineNumber": 13,
+                    "columnNumber": 0
+                  },
+                  "end": {
+                    "lineNumber": 14,
+                    "columnNumber": 28
+                  }
+                }
+              }
+            ],
+            "Flags": {
+              "mustSupport": {
+                "value": true,
+                "location": {
+                  "start": {
+                    "lineNumber": 14,
+                    "columnNumber": 14
+                  },
+                  "end": {
+                    "lineNumber": 14,
+                    "columnNumber": 14
+                  }
+                }
+              },
+              "includeInSummary": {
+                "value": true,
+                "location": {
+                  "start": {
+                    "lineNumber": 14,
+                    "columnNumber": 17
+                  },
+                  "end": {
+                    "lineNumber": 14,
+                    "columnNumber": 17
+                  }
+                }
+              },
+              "modifier": {
+                "value": true,
+                "location": {
+                  "start": {
+                    "lineNumber": 14,
+                    "columnNumber": 20
+                  },
+                  "end": {
+                    "lineNumber": 14,
+                    "columnNumber": 20
+                  }
+                }
+              },
+              "normative": {
+                "value": true,
+                "location": {
+                  "start": {
+                    "lineNumber": 14,
+                    "columnNumber": 23
+                  },
+                  "end": {
+                    "lineNumber": 14,
+                    "columnNumber": 23
+                  }
+                }
+              },
+              "trialUse": {
+                "value": true,
+                "location": {
+                  "start": {
+                    "lineNumber": 14,
+                    "columnNumber": 25
+                  },
+                  "end": {
+                    "lineNumber": 14,
+                    "columnNumber": 25
+                  }
+                }
+              },
+              "draft": {
+                "value": true,
+                "location": {
+                  "start": {
+                    "lineNumber": 14,
+                    "columnNumber": 28
+                  },
+                  "end": {
+                    "lineNumber": 14,
+                    "columnNumber": 28
+                  }
+                }
+              }
+            }
+          }
+        ],
+        "bindingRules": [
+          {
+            "bindable": {
+              "value": "bindable",
+              "location": {
+                "start": {
+                  "lineNumber": 17,
+                  "columnNumber": 2
+                },
+                "end": {
+                  "lineNumber": 17,
+                  "columnNumber": 2
+                }
+              }
+            },
+            "valueSet": {
+              "value": "http://hl7.org/fhir/ValueSet",
+              "location": {
+                "start": {
+                  "lineNumber": 17,
+                  "columnNumber": 16
+                },
+                "end": {
+                  "lineNumber": 17,
+                  "columnNumber": 16
+                }
+              }
+            },
+            "strength": {
+              "value": "(example)",
+              "location": {
+                "start": {
+                  "lineNumber": 17,
+                  "columnNumber": 45
+                },
+                "end": {
+                  "lineNumber": 17,
+                  "columnNumber": 45
+                }
+              }
+            }
+          },
+          {
+            "bindable": {
+              "value": "bindable",
+              "location": {
+                "start": {
+                  "lineNumber": 18,
+                  "columnNumber": 2
+                },
+                "end": {
+                  "lineNumber": 18,
+                  "columnNumber": 2
+                }
+              }
+            },
+            "valueSet": {
+              "value": "http://hl7.org/fhir/ValueSet",
+              "location": {
+                "start": {
+                  "lineNumber": 18,
+                  "columnNumber": 16
+                },
+                "end": {
+                  "lineNumber": 18,
+                  "columnNumber": 16
+                }
+              }
+            },
+            "strength": {
+              "value": "(required)",
+              "location": {
+                "start": {
+                  "lineNumber": 18,
+                  "columnNumber": 45
+                },
+                "end": {
+                  "lineNumber": 18,
+                  "columnNumber": 45
+                }
+              }
+            }
+          },
+          {
+            "bindable": {
+              "value": "noStrength",
+              "location": {
+                "start": {
+                  "lineNumber": 19,
+                  "columnNumber": 2
+                },
+                "end": {
+                  "lineNumber": 19,
+                  "columnNumber": 2
+                }
+              }
+            },
+            "valueSet": {
+              "value": "$Alias",
+              "location": {
+                "start": {
+                  "lineNumber": 19,
+                  "columnNumber": 18
+                },
+                "end": {
+                  "lineNumber": 19,
+                  "columnNumber": 18
+                }
+              }
+            },
+            "strength": null
+          }
+        ],
+        "assignmentRules": [
+          {
+            "element": {
+              "value": "code",
+              "location": {
+                "start": {
+                  "lineNumber": 22,
+                  "columnNumber": 2
+                },
+                "end": {
+                  "lineNumber": 22,
+                  "columnNumber": 2
+                }
+              }
+            },
+            "value": {
+              "value": "https://loinc.org#69548-6",
+              "location": {
+                "start": {
+                  "lineNumber": 22,
+                  "columnNumber": 9
+                },
+                "end": {
+                  "lineNumber": 22,
+                  "columnNumber": 9
+                }
+              }
+            },
+            "exactly": {
+              "value": false,
+              "location": null
+            }
+          },
+          {
+            "element": {
+              "value": "code",
+              "location": {
+                "start": {
+                  "lineNumber": 23,
+                  "columnNumber": 2
+                },
+                "end": {
+                  "lineNumber": 23,
+                  "columnNumber": 2
+                }
+              }
+            },
+            "value": {
+              "value": "$LNC#69548-6",
+              "location": {
+                "start": {
+                  "lineNumber": 23,
+                  "columnNumber": 9
+                },
+                "end": {
+                  "lineNumber": 23,
+                  "columnNumber": 9
+                }
+              }
+            },
+            "exactly": {
+              "value": true,
+              "location": {
+                "start": {
+                  "lineNumber": 22,
+                  "columnNumber": 34
+                },
+                "end": {
+                  "lineNumber": 23,
+                  "columnNumber": 22
+                }
+              }
+            }
+          },
+          {
+            "element": {
+              "value": "status",
+              "location": {
+                "start": {
+                  "lineNumber": 24,
+                  "columnNumber": 2
+                },
+                "end": {
+                  "lineNumber": 24,
+                  "columnNumber": 2
+                }
+              }
+            },
+            "value": {
+              "value": "#arrived",
+              "location": {
+                "start": {
+                  "lineNumber": 24,
+                  "columnNumber": 11
+                },
+                "end": {
+                  "lineNumber": 24,
+                  "columnNumber": 11
+                }
+              }
+            },
+            "exactly": {
+              "value": false,
+              "location": null
+            }
+          },
+          {
+            "element": {
+              "value": "active",
+              "location": {
+                "start": {
+                  "lineNumber": 25,
+                  "columnNumber": 2
+                },
+                "end": {
+                  "lineNumber": 25,
+                  "columnNumber": 2
+                }
+              }
+            },
+            "value": {
+              "value": "true",
+              "location": {
+                "start": {
+                  "lineNumber": 25,
+                  "columnNumber": 11
+                },
+                "end": {
+                  "lineNumber": 25,
+                  "columnNumber": 11
+                }
+              }
+            },
+            "exactly": {
+              "value": false,
+              "location": null
+            }
+          },
+          {
+            "element": {
+              "value": "onsetDateTime",
+              "location": {
+                "start": {
+                  "lineNumber": 26,
+                  "columnNumber": 2
+                },
+                "end": {
+                  "lineNumber": 26,
+                  "columnNumber": 2
+                }
+              }
+            },
+            "value": {
+              "value": "2019-04-02",
+              "location": {
+                "start": {
+                  "lineNumber": 26,
+                  "columnNumber": 18
+                },
+                "end": {
+                  "lineNumber": 26,
+                  "columnNumber": 18
+                }
+              }
+            },
+            "exactly": {
+              "value": false,
+              "location": null
+            }
+          },
+          {
+            "element": {
+              "value": "recordedDate",
+              "location": {
+                "start": {
+                  "lineNumber": 27,
+                  "columnNumber": 2
+                },
+                "end": {
+                  "lineNumber": 27,
+                  "columnNumber": 2
+                }
+              }
+            },
+            "value": {
+              "value": "2013-06-08T09:57:34.2112Z",
+              "location": {
+                "start": {
+                  "lineNumber": 27,
+                  "columnNumber": 17
+                },
+                "end": {
+                  "lineNumber": 27,
+                  "columnNumber": 17
+                }
+              }
+            },
+            "exactly": {
+              "value": false,
+              "location": null
+            }
+          },
+          {
+            "element": {
+              "value": "extension[my-extension].valueInteger64",
+              "location": {
+                "start": {
+                  "lineNumber": 28,
+                  "columnNumber": 2
+                },
+                "end": {
+                  "lineNumber": 28,
+                  "columnNumber": 2
+                }
+              }
+            },
+            "value": {
+              "value": "1234567890",
+              "location": {
+                "start": {
+                  "lineNumber": 28,
+                  "columnNumber": 43
+                },
+                "end": {
+                  "lineNumber": 28,
+                  "columnNumber": 43
+                }
+              }
+            },
+            "exactly": {
+              "value": false,
+              "location": null
+            }
+          },
+          {
+            "element": {
+              "value": "myCoding",
+              "location": {
+                "start": {
+                  "lineNumber": 29,
+                  "columnNumber": 2
+                },
+                "end": {
+                  "lineNumber": 29,
+                  "columnNumber": 2
+                }
+              }
+            },
+            "value": {
+              "value": "http://hl7.org/fhir/CodeSystem/example-supplement|201801103#chol-mmol",
+              "location": {
+                "start": {
+                  "lineNumber": 29,
+                  "columnNumber": 13
+                },
+                "end": {
+                  "lineNumber": 29,
+                  "columnNumber": 13
+                }
+              }
+            },
+            "exactly": {
+              "value": false,
+              "location": null
+            }
+          },
+          {
+            "element": {
+              "value": "type",
+              "location": {
+                "start": {
+                  "lineNumber": 30,
+                  "columnNumber": 2
+                },
+                "end": {
+                  "lineNumber": 30,
+                  "columnNumber": 2
+                }
+              }
+            },
+            "value": {
+              "value": "urn:iso-astm:E1762-95:2013#1.2.840.10065.1.12.1.2\"DisplayString",
+              "location": {
+                "start": {
+                  "lineNumber": 30,
+                  "columnNumber": 9
+                },
+                "end": {
+                  "lineNumber": 30,
+                  "columnNumber": 59
+                }
+              }
+            },
+            "exactly": {
+              "value": false,
+              "location": null
+            }
+          },
+          {
+            "element": {
+              "value": "\u003cCodeableConcept\u003e.text",
+              "location": {
+                "start": {
+                  "lineNumber": 31,
+                  "columnNumber": 2
+                },
+                "end": {
+                  "lineNumber": 31,
+                  "columnNumber": 2
+                }
+              }
+            },
+            "value": {
+              "value": "{string}",
+              "location": {
+                "start": {
+                  "lineNumber": 31,
+                  "columnNumber": 27
+                },
+                "end": {
+                  "lineNumber": 31,
+                  "columnNumber": 27
+                }
+              }
+            },
+            "exactly": {
+              "value": false,
+              "location": null
+            }
+          },
+          {
+            "element": {
+              "value": "myCodeableConcept.coding[0]",
+              "location": {
+                "start": {
+                  "lineNumber": 32,
+                  "columnNumber": 2
+                },
+                "end": {
+                  "lineNumber": 32,
+                  "columnNumber": 2
+                }
+              }
+            },
+            "value": {
+              "value": "$SCT#363346000\"Malignant neoplastic disease (disorder)",
+              "location": {
+                "start": {
+                  "lineNumber": 32,
+                  "columnNumber": 32
+                },
+                "end": {
+                  "lineNumber": 32,
+                  "columnNumber": 47
+                }
+              }
+            },
+            "exactly": {
+              "value": false,
+              "location": null
+            }
+          },
+          {
+            "element": {
+              "value": "valueQuantity",
+              "location": {
+                "start": {
+                  "lineNumber": 33,
+                  "columnNumber": 2
+                },
+                "end": {
+                  "lineNumber": 33,
+                  "columnNumber": 2
+                }
+              }
+            },
+            "value": {
+              "value": "55.0'mm'",
+              "location": {
+                "start": {
+                  "lineNumber": 33,
+                  "columnNumber": 18
+                },
+                "end": {
+                  "lineNumber": 33,
+                  "columnNumber": 23
+                }
+              }
+            },
+            "exactly": {
+              "value": false,
+              "location": null
+            }
+          },
+          {
+            "element": {
+              "value": "valueQuantity",
+              "location": {
+                "start": {
+                  "lineNumber": 34,
+                  "columnNumber": 2
+                },
+                "end": {
+                  "lineNumber": 34,
+                  "columnNumber": 2
+                }
+              }
+            },
+            "value": {
+              "value": "55.0'mm'\"millimeter",
+              "location": {
+                "start": {
+                  "lineNumber": 34,
+                  "columnNumber": 18
+                },
+                "end": {
+                  "lineNumber": 34,
+                  "columnNumber": 28
+                }
+              }
+            },
+            "exactly": {
+              "value": false,
+              "location": null
+            }
+          },
+          {
+            "element": {
+              "value": "subject",
+              "location": {
+                "start": {
+                  "lineNumber": 35,
+                  "columnNumber": 2
+                },
+                "end": {
+                  "lineNumber": 35,
+                  "columnNumber": 2
+                }
+              }
+            },
+            "value": {
+              "value": "Reference(EveAnyperson)",
+              "location": {
+                "start": {
+                  "lineNumber": 35,
+                  "columnNumber": 12
+                },
+                "end": {
+                  "lineNumber": 35,
+                  "columnNumber": 12
+                }
+              }
+            },
+            "exactly": {
+              "value": false,
+              "location": null
+            }
+          },
+          {
+            "element": {
+              "value": "entry[0].resource",
+              "location": {
+                "start": {
+                  "lineNumber": 36,
+                  "columnNumber": 2
+                },
+                "end": {
+                  "lineNumber": 36,
+                  "columnNumber": 2
+                }
+              }
+            },
+            "value": {
+              "value": "EveAnyperson",
+              "location": {
+                "start": {
+                  "lineNumber": 36,
+                  "columnNumber": 22
+                },
+                "end": {
+                  "lineNumber": 36,
+                  "columnNumber": 22
+                }
+              }
+            },
+            "exactly": {
+              "value": false,
+              "location": null
+            }
+          }
+        ],
+        "containsRules": [
+          {
+            "name": {
+              "value": "extension",
+              "location": {
+                "start": {
+                  "lineNumber": 39,
+                  "columnNumber": 2
+                },
+                "end": {
+                  "lineNumber": 39,
+                  "columnNumber": 2
+                }
+              }
+            },
+            "items": [
+              {
+                "name": {
+                  "value": "$Disability",
+                  "location": {
+                    "start": {
+                      "lineNumber": 40,
+                      "columnNumber": 6
+                    },
+                    "end": {
+                      "lineNumber": 40,
+                      "columnNumber": 6
+                    }
+                  }
+                },
+                "localName": {
+                  "value": "disability",
+                  "location": {
+                    "start": {
+                      "lineNumber": 40,
+                      "columnNumber": 24
+                    },
+                    "end": {
+                      "lineNumber": 40,
+                      "columnNumber": 24
+                    }
+                  }
+                },
+                "cardinality": {
+                  "min": null,
+                  "max": {
+                    "value": 2,
+                    "location": {
+                      "start": {
+                        "lineNumber": 40,
+                        "columnNumber": 6
+                      },
+                      "end": {
+                        "lineNumber": 40,
+                        "columnNumber": 42
+                      }
+                    }
+                  }
+                },
+                "flags": {
+                  "mustSupport": {
+                    "value": true,
+                    "location": {
+                      "start": {
+                        "lineNumber": 40,
+                        "columnNumber": 39
+                      },
+                      "end": {
+                        "lineNumber": 40,
+                        "columnNumber": 39
+                      }
+                    }
+                  },
+                  "includeInSummary": {
+                    "value": false,
+                    "location": null
+                  },
+                  "modifier": {
+                    "value": false,
+                    "location": null
+                  },
+                  "normative": {
+                    "value": false,
+                    "location": null
+                  },
+                  "trialUse": {
+                    "value": false,
+                    "location": null
+                  },
+                  "draft": {
+                    "value": true,
+                    "location": {
+                      "start": {
+                        "lineNumber": 40,
+                        "columnNumber": 42
+                      },
+                      "end": {
+                        "lineNumber": 40,
+                        "columnNumber": 42
+                      }
+                    }
+                  }
+                }
+              },
+              {
+                "name": {
+                  "value": "$GenderIdentity",
+                  "location": {
+                    "start": {
+                      "lineNumber": 41,
+                      "columnNumber": 6
+                    },
+                    "end": {
+                      "lineNumber": 41,
+                      "columnNumber": 6
+                    }
+                  }
+                },
+                "localName": {
+                  "value": "genderIdentity",
+                  "location": {
+                    "start": {
+                      "lineNumber": 41,
+                      "columnNumber": 28
+                    },
+                    "end": {
+                      "lineNumber": 41,
+                      "columnNumber": 28
+                    }
+                  }
+                },
+                "cardinality": {
+                  "min": {
+                    "value": 1,
+                    "location": {
+                      "start": {
+                        "lineNumber": 41,
+                        "columnNumber": 6
+                      },
+                      "end": {
+                        "lineNumber": 41,
+                        "columnNumber": 47
+                      }
+                    }
+                  },
+                  "max": null
+                },
+                "flags": {
+                  "mustSupport": {
+                    "value": true,
+                    "location": {
+                      "start": {
+                        "lineNumber": 41,
+                        "columnNumber": 47
+                      },
+                      "end": {
+                        "lineNumber": 41,
+                        "columnNumber": 47
+                      }
+                    }
+                  },
+                  "includeInSummary": {
+                    "value": false,
+                    "location": null
+                  },
+                  "modifier": {
+                    "value": false,
+                    "location": null
+                  },
+                  "normative": {
+                    "value": false,
+                    "location": null
+                  },
+                  "trialUse": {
+                    "value": false,
+                    "location": null
+                  },
+                  "draft": {
+                    "value": false,
+                    "location": null
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "name": {
+              "value": "component",
+              "location": {
+                "start": {
+                  "lineNumber": 42,
+                  "columnNumber": 2
+                },
+                "end": {
+                  "lineNumber": 42,
+                  "columnNumber": 2
+                }
+              }
+            },
+            "items": [
+              {
+                "name": {
+                  "value": "systolicBP",
+                  "location": {
+                    "start": {
+                      "lineNumber": 42,
+                      "columnNumber": 21
+                    },
+                    "end": {
+                      "lineNumber": 42,
+                      "columnNumber": 21
+                    }
+                  }
+                },
+                "localName": null,
+                "cardinality": {
+                  "min": {
+                    "value": 1,
+                    "location": {
+                      "start": {
+                        "lineNumber": 42,
+                        "columnNumber": 21
+                      },
+                      "end": {
+                        "lineNumber": 42,
+                        "columnNumber": 40
+                      }
+                    }
+                  },
+                  "max": {
+                    "value": 1,
+                    "location": {
+                      "start": {
+                        "lineNumber": 42,
+                        "columnNumber": 21
+                      },
+                      "end": {
+                        "lineNumber": 42,
+                        "columnNumber": 40
+                      }
+                    }
+                  }
+                },
+                "flags": {
+                  "mustSupport": {
+                    "value": true,
+                    "location": {
+                      "start": {
+                        "lineNumber": 42,
+                        "columnNumber": 37
+                      },
+                      "end": {
+                        "lineNumber": 42,
+                        "columnNumber": 37
+                      }
+                    }
+                  },
+                  "includeInSummary": {
+                    "value": true,
+                    "location": {
+                      "start": {
+                        "lineNumber": 42,
+                        "columnNumber": 40
+                      },
+                      "end": {
+                        "lineNumber": 42,
+                        "columnNumber": 40
+                      }
+                    }
+                  },
+                  "modifier": {
+                    "value": false,
+                    "location": null
+                  },
+                  "normative": {
+                    "value": false,
+                    "location": null
+                  },
+                  "trialUse": {
+                    "value": false,
+                    "location": null
+                  },
+                  "draft": {
+                    "value": false,
+                    "location": null
+                  }
+                }
+              }
+            ]
+          }
+        ],
+        "typeRules": [
+          {
+            "element": {
+              "value": "valueQuantity",
+              "location": {
+                "start": {
+                  "lineNumber": 45,
+                  "columnNumber": 2
+                },
+                "end": {
+                  "lineNumber": 45,
+                  "columnNumber": 2
+                }
+              }
+            },
+            "types": [
+              {
+                "name": {
+                  "value": "SimpleQuantity",
+                  "location": {
+                    "start": {
+                      "lineNumber": 45,
+                      "columnNumber": 21
+                    },
+                    "end": {
+                      "lineNumber": 45,
+                      "columnNumber": 21
+                    }
+                  }
+                },
+                "referenceType": null,
+                "canonical": null,
+                "codeableReferenceType": null
+              }
+            ]
+          },
+          {
+            "element": {
+              "value": "onset[x]",
+              "location": {
+                "start": {
+                  "lineNumber": 46,
+                  "columnNumber": 2
+                },
+                "end": {
+                  "lineNumber": 46,
+                  "columnNumber": 2
+                }
+              }
+            },
+            "types": [
+              {
+                "name": {
+                  "value": "Period",
+                  "location": {
+                    "start": {
+                      "lineNumber": 46,
+                      "columnNumber": 16
+                    },
+                    "end": {
+                      "lineNumber": 46,
+                      "columnNumber": 16
+                    }
+                  }
+                },
+                "referenceType": null,
+                "canonical": null,
+                "codeableReferenceType": null
+              },
+              {
+                "name": {
+                  "value": "Range",
+                  "location": {
+                    "start": {
+                      "lineNumber": 46,
+                      "columnNumber": 26
+                    },
+                    "end": {
+                      "lineNumber": 46,
+                      "columnNumber": 26
+                    }
+                  }
+                },
+                "referenceType": null,
+                "canonical": null,
+                "codeableReferenceType": null
+              }
+            ]
+          },
+          {
+            "element": {
+              "value": "value[x]",
+              "location": {
+                "start": {
+                  "lineNumber": 47,
+                  "columnNumber": 2
+                },
+                "end": {
+                  "lineNumber": 47,
+                  "columnNumber": 2
+                }
+              }
+            },
+            "types": [
+              {
+                "name": {
+                  "value": "integer64",
+                  "location": {
+                    "start": {
+                      "lineNumber": 47,
+                      "columnNumber": 16
+                    },
+                    "end": {
+                      "lineNumber": 47,
+                      "columnNumber": 16
+                    }
+                  }
+                },
+                "referenceType": null,
+                "canonical": null,
+                "codeableReferenceType": null
+              }
+            ]
+          },
+          {
+            "element": {
+              "value": "performer",
+              "location": {
+                "start": {
+                  "lineNumber": 48,
+                  "columnNumber": 2
+                },
+                "end": {
+                  "lineNumber": 48,
+                  "columnNumber": 2
+                }
+              }
+            },
+            "types": [
+              {
+                "name": null,
+                "referenceType": {
+                  "value": "Reference(Practitioner or PractitionerRole)",
+                  "location": {
+                    "start": {
+                      "lineNumber": 48,
+                      "columnNumber": 17
+                    },
+                    "end": {
+                      "lineNumber": 48,
+                      "columnNumber": 17
+                    }
+                  }
+                },
+                "canonical": null,
+                "codeableReferenceType": null
+              }
+            ]
+          },
+          {
+            "element": {
+              "value": "performer[Practitioner]",
+              "location": {
+                "start": {
+                  "lineNumber": 49,
+                  "columnNumber": 2
+                },
+                "end": {
+                  "lineNumber": 49,
+                  "columnNumber": 2
+                }
+              }
+            },
+            "types": [
+              {
+                "name": null,
+                "referenceType": {
+                  "value": "Reference(PrimaryCareProvider)",
+                  "location": {
+                    "start": {
+                      "lineNumber": 49,
+                      "columnNumber": 31
+                    },
+                    "end": {
+                      "lineNumber": 49,
+                      "columnNumber": 31
+                    }
+                  }
+                },
+                "canonical": null,
+                "codeableReferenceType": null
+              }
+            ]
+          },
+          {
+            "element": {
+              "value": "action.definition[x]",
+              "location": {
+                "start": {
+                  "lineNumber": 50,
+                  "columnNumber": 2
+                },
+                "end": {
+                  "lineNumber": 50,
+                  "columnNumber": 2
+                }
+              }
+            },
+            "types": [
+              {
+                "name": null,
+                "referenceType": null,
+                "canonical": {
+                  "value": "Canonical(ActivityDefinition or PlanDefinition)",
+                  "location": {
+                    "start": {
+                      "lineNumber": 50,
+                      "columnNumber": 28
+                    },
+                    "end": {
+                      "lineNumber": 50,
+                      "columnNumber": 28
+                    }
+                  }
+                },
+                "codeableReferenceType": null
+              }
+            ]
+          },
+          {
+            "element": {
+              "value": "activity.performedActivity",
+              "location": {
+                "start": {
+                  "lineNumber": 51,
+                  "columnNumber": 2
+                },
+                "end": {
+                  "lineNumber": 51,
+                  "columnNumber": 2
+                }
+              }
+            },
+            "types": [
+              {
+                "name": null,
+                "referenceType": null,
+                "canonical": null,
+                "codeableReferenceType": {
+                  "value": "CodeableReference(Encounter or Procedure)",
+                  "location": {
+                    "start": {
+                      "lineNumber": 51,
+                      "columnNumber": 34
+                    },
+                    "end": {
+                      "lineNumber": 51,
+                      "columnNumber": 34
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        ],
+        "obeysRules": [
+          {
+            "element": null,
+            "invariants": [
+              {
+                "value": "us-core-9",
+                "location": {
+                  "start": {
+                    "lineNumber": 54,
+                    "columnNumber": 8
+                  },
+                  "end": {
+                    "lineNumber": 54,
+                    "columnNumber": 8
+                  }
+                }
+              },
+              {
+                "value": "us-core-8",
+                "location": {
+                  "start": {
+                    "lineNumber": 54,
+                    "columnNumber": 22
+                  },
+                  "end": {
+                    "lineNumber": 54,
+                    "columnNumber": 22
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "element": {
+              "value": "name",
+              "location": {
+                "start": {
+                  "lineNumber": 55,
+                  "columnNumber": 2
+                },
+                "end": {
+                  "lineNumber": 55,
+                  "columnNumber": 2
+                }
+              }
+            },
+            "invariants": [
+              {
+                "value": "us-core-8",
+                "location": {
+                  "start": {
+                    "lineNumber": 55,
+                    "columnNumber": 13
+                  },
+                  "end": {
+                    "lineNumber": 55,
+                    "columnNumber": 13
+                  }
+                }
+              },
+              {
+                "value": "us-core-7",
+                "location": {
+                  "start": {
+                    "lineNumber": 55,
+                    "columnNumber": 27
+                  },
+                  "end": {
+                    "lineNumber": 55,
+                    "columnNumber": 27
+                  }
+                }
+              }
+            ]
+          }
+        ],
+        "caretValueRules": [
+          {
+            "element": {
+              "value": "experimental",
+              "location": {
+                "start": {
+                  "lineNumber": 58,
+                  "columnNumber": 14
+                },
+                "end": {
+                  "lineNumber": 58,
+                  "columnNumber": 14
+                }
+              }
+            },
+            "elementInProfile": {
+              "value": "testElement",
+              "location": {
+                "start": {
+                  "lineNumber": 58,
+                  "columnNumber": 2
+                },
+                "end": {
+                  "lineNumber": 58,
+                  "columnNumber": 2
+                }
+              }
+            },
+            "value": {
+              "value": "true",
+              "location": {
+                "start": {
+                  "lineNumber": 58,
+                  "columnNumber": 30
+                },
+                "end": {
+                  "lineNumber": 58,
+                  "columnNumber": 30
+                }
+              }
+            }
+          },
+          {
+            "element": {
+              "value": "url",
+              "location": {
+                "start": {
+                  "lineNumber": 59,
+                  "columnNumber": 2
+                },
+                "end": {
+                  "lineNumber": 59,
+                  "columnNumber": 2
+                }
+              }
+            },
+            "elementInProfile": null,
+            "value": {
+              "value": "http://example.org/custom/myextension",
+              "location": {
+                "start": {
+                  "lineNumber": 59,
+                  "columnNumber": 9
+                },
+                "end": {
+                  "lineNumber": 59,
+                  "columnNumber": 9
+                }
+              }
+            }
+          }
+        ],
+        "insertRules": [
+          {
+            "path": null,
+            "ruleSetName": {
+              "value": "RuleSet1",
+              "location": {
+                "start": {
+                  "lineNumber": 61,
+                  "columnNumber": 0
+                },
+                "end": {
+                  "lineNumber": 62,
+                  "columnNumber": 8
+                }
+              }
+            },
+            "parameters": []
+          },
+          {
+            "path": {
+              "value": "path",
+              "location": {
+                "start": {
+                  "lineNumber": 63,
+                  "columnNumber": 2
+                },
+                "end": {
+                  "lineNumber": 63,
+                  "columnNumber": 2
+                }
+              }
+            },
+            "ruleSetName": {
+              "value": "RuleSet2",
+              "location": {
+                "start": {
+                  "lineNumber": 62,
+                  "columnNumber": 17
+                },
+                "end": {
+                  "lineNumber": 63,
+                  "columnNumber": 13
+                }
+              }
+            },
+            "parameters": []
+          },
+          {
+            "path": null,
+            "ruleSetName": {
+              "value": "RuleSet3",
+              "location": {
+                "start": {
+                  "lineNumber": 64,
+                  "columnNumber": 8
+                },
+                "end": {
+                  "lineNumber": 64,
+                  "columnNumber": 34
+                }
+              }
+            },
+            "parameters": [
+              {
+                "value": "param1",
+                "location": {
+                  "start": {
+                    "lineNumber": 64,
+                    "columnNumber": 19
+                  },
+                  "end": {
+                    "lineNumber": 64,
+                    "columnNumber": 19
+                  }
+                }
+              },
+              {
+                "value": "param2",
+                "location": {
+                  "start": {
+                    "lineNumber": 64,
+                    "columnNumber": 26
+                  },
+                  "end": {
+                    "lineNumber": 64,
+                    "columnNumber": 26
+                  }
+                }
+              },
+              {
+                "value": "[[param3]]",
+                "location": {
+                  "start": {
+                    "lineNumber": 64,
+                    "columnNumber": 34
+                  },
+                  "end": {
+                    "lineNumber": 64,
+                    "columnNumber": 34
+                  }
+                }
+              }
+            ]
+          }
+        ],
+        "pathRules": [
+          {
+            "path": {
+              "value": "pathRule",
+              "location": {
+                "start": {
+                  "lineNumber": 67,
+                  "columnNumber": 2
+                },
+                "end": {
+                  "lineNumber": 67,
+                  "columnNumber": 2
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "codeSystems": null,
+  "instances": null
+}

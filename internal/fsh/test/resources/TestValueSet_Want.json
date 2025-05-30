@@ -1,0 +1,679 @@
+{
+  "valueSets": [
+    {
+      "name": {
+        "value": "TestValueSet_VS",
+        "location": {
+          "start": {
+            "lineNumber": 1,
+            "columnNumber": 10
+          },
+          "end": {
+            "lineNumber": 1,
+            "columnNumber": 10
+          }
+        }
+      },
+      "id": {
+        "value": "test-value-set",
+        "location": {
+          "start": {
+            "lineNumber": 2,
+            "columnNumber": 4
+          },
+          "end": {
+            "lineNumber": 2,
+            "columnNumber": 4
+          }
+        }
+      },
+      "title": {
+        "value": "Test Value Set",
+        "location": {
+          "start": {
+            "lineNumber": 3,
+            "columnNumber": 0
+          },
+          "end": {
+            "lineNumber": 3,
+            "columnNumber": 7
+          }
+        }
+      },
+      "description": {
+        "value": "This is a value set description.",
+        "location": {
+          "start": {
+            "lineNumber": 4,
+            "columnNumber": 0
+          },
+          "end": {
+            "lineNumber": 4,
+            "columnNumber": 13
+          }
+        }
+      },
+      "includeComponents": [
+        {
+          "codePath": {
+            "value": "$codeAlias#code",
+            "location": {
+              "start": {
+                "lineNumber": 7,
+                "columnNumber": 2
+              },
+              "end": {
+                "lineNumber": 7,
+                "columnNumber": 18
+              }
+            }
+          },
+          "codeString": {
+            "value": "Example code",
+            "location": {
+              "start": {
+                "lineNumber": 7,
+                "columnNumber": 2
+              },
+              "end": {
+                "lineNumber": 7,
+                "columnNumber": 18
+              }
+            }
+          },
+          "fromCodeSystem": null,
+          "fromValueSet": null,
+          "filters": null
+        },
+        {
+          "codePath": {
+            "value": "http://example-url#code",
+            "location": {
+              "start": {
+                "lineNumber": 8,
+                "columnNumber": 10
+              },
+              "end": {
+                "lineNumber": 8,
+                "columnNumber": 34
+              }
+            }
+          },
+          "codeString": {
+            "value": "Another example code",
+            "location": {
+              "start": {
+                "lineNumber": 8,
+                "columnNumber": 10
+              },
+              "end": {
+                "lineNumber": 8,
+                "columnNumber": 34
+              }
+            }
+          },
+          "fromCodeSystem": null,
+          "fromValueSet": null,
+          "filters": null
+        },
+        {
+          "codePath": null,
+          "codeString": null,
+          "fromCodeSystem": {
+            "name": {
+              "value": "http://system-url",
+              "location": {
+                "start": {
+                  "lineNumber": 9,
+                  "columnNumber": 21
+                },
+                "end": {
+                  "lineNumber": 9,
+                  "columnNumber": 28
+                }
+              }
+            },
+            "version": {
+              "value": "version",
+              "location": {
+                "start": {
+                  "lineNumber": 9,
+                  "columnNumber": 21
+                },
+                "end": {
+                  "lineNumber": 9,
+                  "columnNumber": 28
+                }
+              }
+            }
+          },
+          "fromValueSet": [
+            {
+              "name": {
+                "value": "http://valueset1-url",
+                "location": {
+                  "start": {
+                    "lineNumber": 9,
+                    "columnNumber": 58
+                  },
+                  "end": {
+                    "lineNumber": 9,
+                    "columnNumber": 100
+                  }
+                }
+              },
+              "version": {
+                "value": "version",
+                "location": {
+                  "start": {
+                    "lineNumber": 9,
+                    "columnNumber": 58
+                  },
+                  "end": {
+                    "lineNumber": 9,
+                    "columnNumber": 100
+                  }
+                }
+              }
+            },
+            {
+              "name": {
+                "value": "http://valueset2-url",
+                "location": {
+                  "start": {
+                    "lineNumber": 9,
+                    "columnNumber": 58
+                  },
+                  "end": {
+                    "lineNumber": 9,
+                    "columnNumber": 100
+                  }
+                }
+              },
+              "version": {
+                "value": "version",
+                "location": {
+                  "start": {
+                    "lineNumber": 9,
+                    "columnNumber": 58
+                  },
+                  "end": {
+                    "lineNumber": 9,
+                    "columnNumber": 100
+                  }
+                }
+              }
+            }
+          ],
+          "filters": [
+            {
+              "property": {
+                "value": "property",
+                "location": {
+                  "start": {
+                    "lineNumber": 9,
+                    "columnNumber": 135
+                  },
+                  "end": {
+                    "lineNumber": 9,
+                    "columnNumber": 135
+                  }
+                }
+              },
+              "operator": {
+                "value": "descendant-of",
+                "location": {
+                  "start": {
+                    "lineNumber": 9,
+                    "columnNumber": 144
+                  },
+                  "end": {
+                    "lineNumber": 9,
+                    "columnNumber": 144
+                  }
+                }
+              },
+              "value": {
+                "value": "#some-parent",
+                "location": {
+                  "start": {
+                    "lineNumber": 9,
+                    "columnNumber": 158
+                  },
+                  "end": {
+                    "lineNumber": 9,
+                    "columnNumber": 158
+                  }
+                }
+              }
+            }
+          ]
+        }
+      ],
+      "excludeComponents": [
+        {
+          "codePath": null,
+          "codeString": null,
+          "fromCodeSystem": {
+            "name": {
+              "value": "http://system-url",
+              "location": {
+                "start": {
+                  "lineNumber": 10,
+                  "columnNumber": 96
+                },
+                "end": {
+                  "lineNumber": 10,
+                  "columnNumber": 103
+                }
+              }
+            },
+            "version": {
+              "value": "version",
+              "location": {
+                "start": {
+                  "lineNumber": 10,
+                  "columnNumber": 96
+                },
+                "end": {
+                  "lineNumber": 10,
+                  "columnNumber": 103
+                }
+              }
+            }
+          },
+          "fromValueSet": [
+            {
+              "name": {
+                "value": "http://valueset1-url",
+                "location": {
+                  "start": {
+                    "lineNumber": 10,
+                    "columnNumber": 21
+                  },
+                  "end": {
+                    "lineNumber": 10,
+                    "columnNumber": 63
+                  }
+                }
+              },
+              "version": {
+                "value": "version",
+                "location": {
+                  "start": {
+                    "lineNumber": 10,
+                    "columnNumber": 21
+                  },
+                  "end": {
+                    "lineNumber": 10,
+                    "columnNumber": 63
+                  }
+                }
+              }
+            },
+            {
+              "name": {
+                "value": "http://valueset2-url",
+                "location": {
+                  "start": {
+                    "lineNumber": 10,
+                    "columnNumber": 21
+                  },
+                  "end": {
+                    "lineNumber": 10,
+                    "columnNumber": 63
+                  }
+                }
+              },
+              "version": {
+                "value": "version",
+                "location": {
+                  "start": {
+                    "lineNumber": 10,
+                    "columnNumber": 21
+                  },
+                  "end": {
+                    "lineNumber": 10,
+                    "columnNumber": 63
+                  }
+                }
+              }
+            }
+          ],
+          "filters": [
+            {
+              "property": {
+                "value": "property",
+                "location": {
+                  "start": {
+                    "lineNumber": 10,
+                    "columnNumber": 135
+                  },
+                  "end": {
+                    "lineNumber": 10,
+                    "columnNumber": 135
+                  }
+                }
+              },
+              "operator": {
+                "value": "is-a",
+                "location": {
+                  "start": {
+                    "lineNumber": 10,
+                    "columnNumber": 144
+                  },
+                  "end": {
+                    "lineNumber": 10,
+                    "columnNumber": 144
+                  }
+                }
+              },
+              "value": {
+                "value": "#123\"Some concept\"",
+                "location": {
+                  "start": {
+                    "lineNumber": 10,
+                    "columnNumber": 149
+                  },
+                  "end": {
+                    "lineNumber": 10,
+                    "columnNumber": 154
+                  }
+                }
+              }
+            }
+          ]
+        }
+      ],
+      "valueSetRules": {
+        "caretValueRules": [
+          {
+            "element": {
+              "value": "slice[0].field",
+              "location": {
+                "start": {
+                  "lineNumber": 13,
+                  "columnNumber": 2
+                },
+                "end": {
+                  "lineNumber": 13,
+                  "columnNumber": 2
+                }
+              }
+            },
+            "elementInProfile": null,
+            "value": {
+              "value": "#code\"code description",
+              "location": {
+                "start": {
+                  "lineNumber": 13,
+                  "columnNumber": 20
+                },
+                "end": {
+                  "lineNumber": 13,
+                  "columnNumber": 26
+                }
+              }
+            }
+          }
+        ],
+        "codeCaretValueRules": [
+          {
+            "conceptCodes": [
+              {
+                "value": "$code#codeNum",
+                "location": {
+                  "start": {
+                    "lineNumber": 15,
+                    "columnNumber": 0
+                  },
+                  "end": {
+                    "lineNumber": 16,
+                    "columnNumber": 45
+                  }
+                }
+              },
+              {
+                "value": "#child",
+                "location": {
+                  "start": {
+                    "lineNumber": 15,
+                    "columnNumber": 0
+                  },
+                  "end": {
+                    "lineNumber": 16,
+                    "columnNumber": 45
+                  }
+                }
+              }
+            ],
+            "element": {
+              "value": "some.field",
+              "location": {
+                "start": {
+                  "lineNumber": 16,
+                  "columnNumber": 23
+                },
+                "end": {
+                  "lineNumber": 16,
+                  "columnNumber": 23
+                }
+              }
+            },
+            "value": {
+              "value": "$a#code\"code description",
+              "location": {
+                "start": {
+                  "lineNumber": 16,
+                  "columnNumber": 37
+                },
+                "end": {
+                  "lineNumber": 16,
+                  "columnNumber": 45
+                }
+              }
+            }
+          }
+        ],
+        "insertRules": [
+          {
+            "path": null,
+            "ruleSetName": {
+              "value": "RuleSet1",
+              "location": {
+                "start": {
+                  "lineNumber": 18,
+                  "columnNumber": 0
+                },
+                "end": {
+                  "lineNumber": 19,
+                  "columnNumber": 8
+                }
+              }
+            },
+            "parameters": []
+          },
+          {
+            "path": {
+              "value": "path",
+              "location": {
+                "start": {
+                  "lineNumber": 20,
+                  "columnNumber": 2
+                },
+                "end": {
+                  "lineNumber": 20,
+                  "columnNumber": 2
+                }
+              }
+            },
+            "ruleSetName": {
+              "value": "RuleSet2",
+              "location": {
+                "start": {
+                  "lineNumber": 19,
+                  "columnNumber": 17
+                },
+                "end": {
+                  "lineNumber": 20,
+                  "columnNumber": 13
+                }
+              }
+            },
+            "parameters": []
+          },
+          {
+            "path": null,
+            "ruleSetName": {
+              "value": "RuleSet3",
+              "location": {
+                "start": {
+                  "lineNumber": 21,
+                  "columnNumber": 8
+                },
+                "end": {
+                  "lineNumber": 21,
+                  "columnNumber": 34
+                }
+              }
+            },
+            "parameters": [
+              {
+                "value": "param1",
+                "location": {
+                  "start": {
+                    "lineNumber": 21,
+                    "columnNumber": 19
+                  },
+                  "end": {
+                    "lineNumber": 21,
+                    "columnNumber": 19
+                  }
+                }
+              },
+              {
+                "value": "param2",
+                "location": {
+                  "start": {
+                    "lineNumber": 21,
+                    "columnNumber": 26
+                  },
+                  "end": {
+                    "lineNumber": 21,
+                    "columnNumber": 26
+                  }
+                }
+              },
+              {
+                "value": "[[param3]]",
+                "location": {
+                  "start": {
+                    "lineNumber": 21,
+                    "columnNumber": 34
+                  },
+                  "end": {
+                    "lineNumber": 21,
+                    "columnNumber": 34
+                  }
+                }
+              }
+            ]
+          }
+        ],
+        "codeInsertRules": [
+          {
+            "conceptCodes": [
+              {
+                "value": "#code-one",
+                "location": {
+                  "start": {
+                    "lineNumber": 23,
+                    "columnNumber": 0
+                  },
+                  "end": {
+                    "lineNumber": 24,
+                    "columnNumber": 18
+                  }
+                }
+              }
+            ],
+            "ruleSetName": {
+              "value": "RuleSet4",
+              "location": {
+                "start": {
+                  "lineNumber": 23,
+                  "columnNumber": 0
+                },
+                "end": {
+                  "lineNumber": 24,
+                  "columnNumber": 18
+                }
+              }
+            },
+            "parameters": []
+          },
+          {
+            "conceptCodes": [
+              {
+                "value": "#code-one",
+                "location": {
+                  "start": {
+                    "lineNumber": 24,
+                    "columnNumber": 27
+                  },
+                  "end": {
+                    "lineNumber": 25,
+                    "columnNumber": 40
+                  }
+                }
+              },
+              {
+                "value": "#code-two",
+                "location": {
+                  "start": {
+                    "lineNumber": 24,
+                    "columnNumber": 27
+                  },
+                  "end": {
+                    "lineNumber": 25,
+                    "columnNumber": 40
+                  }
+                }
+              },
+              {
+                "value": "#code-three",
+                "location": {
+                  "start": {
+                    "lineNumber": 24,
+                    "columnNumber": 27
+                  },
+                  "end": {
+                    "lineNumber": 25,
+                    "columnNumber": 40
+                  }
+                }
+              }
+            ],
+            "ruleSetName": {
+              "value": "RuleSet5",
+              "location": {
+                "start": {
+                  "lineNumber": 24,
+                  "columnNumber": 27
+                },
+                "end": {
+                  "lineNumber": 25,
+                  "columnNumber": 40
+                }
+              }
+            },
+            "parameters": []
+          }
+        ]
+      }
+    }
+  ],
+  "profiles": null,
+  "codeSystems": null,
+  "instances": null
+}

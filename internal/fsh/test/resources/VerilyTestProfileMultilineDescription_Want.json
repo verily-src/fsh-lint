@@ -1,0 +1,758 @@
+{
+  "valueSets": null,
+  "profiles": [
+    {
+      "name": {
+        "value": "VerilyLocation3PData",
+        "location": {
+          "start": {
+            "lineNumber": 1,
+            "columnNumber": 9
+          },
+          "end": {
+            "lineNumber": 1,
+            "columnNumber": 9
+          }
+        }
+      },
+      "parent": {
+        "value": "VerilyLocationBaseR4",
+        "location": {
+          "start": {
+            "lineNumber": 2,
+            "columnNumber": 0
+          },
+          "end": {
+            "lineNumber": 2,
+            "columnNumber": 8
+          }
+        }
+      },
+      "id": {
+        "value": "verily-location-3p-data",
+        "location": {
+          "start": {
+            "lineNumber": 3,
+            "columnNumber": 4
+          },
+          "end": {
+            "lineNumber": 3,
+            "columnNumber": 4
+          }
+        }
+      },
+      "title": {
+        "value": "Verily Location 3PD",
+        "location": {
+          "start": {
+            "lineNumber": 4,
+            "columnNumber": 0
+          },
+          "end": {
+            "lineNumber": 4,
+            "columnNumber": 7
+          }
+        }
+      },
+      "description": {
+        "value": "\nThis is\na multiline\ndescription\n",
+        "location": {
+          "start": {
+            "lineNumber": 5,
+            "columnNumber": 0
+          },
+          "end": {
+            "lineNumber": 6,
+            "columnNumber": 0
+          }
+        }
+      },
+      "profileRules": {
+        "cardRules": [
+          {
+            "Element": {
+              "value": "identifier",
+              "location": {
+                "start": {
+                  "lineNumber": 25,
+                  "columnNumber": 2
+                },
+                "end": {
+                  "lineNumber": 25,
+                  "columnNumber": 2
+                }
+              }
+            },
+            "Cardinality": {
+              "min": {
+                "value": 1,
+                "location": {
+                  "start": {
+                    "lineNumber": 24,
+                    "columnNumber": 0
+                  },
+                  "end": {
+                    "lineNumber": 25,
+                    "columnNumber": 18
+                  }
+                }
+              },
+              "max": null
+            },
+            "Flags": {
+              "mustSupport": {
+                "value": true,
+                "location": {
+                  "start": {
+                    "lineNumber": 25,
+                    "columnNumber": 18
+                  },
+                  "end": {
+                    "lineNumber": 25,
+                    "columnNumber": 18
+                  }
+                }
+              },
+              "includeInSummary": {
+                "value": false,
+                "location": null
+              },
+              "modifier": {
+                "value": false,
+                "location": null
+              },
+              "normative": {
+                "value": false,
+                "location": null
+              },
+              "trialUse": {
+                "value": false,
+                "location": null
+              },
+              "draft": {
+                "value": false,
+                "location": null
+              }
+            }
+          }
+        ],
+        "flagRules": [
+          {
+            "Elements": [
+              {
+                "value": "status",
+                "location": {
+                  "start": {
+                    "lineNumber": 16,
+                    "columnNumber": 0
+                  },
+                  "end": {
+                    "lineNumber": 17,
+                    "columnNumber": 9
+                  }
+                }
+              }
+            ],
+            "Flags": {
+              "mustSupport": {
+                "value": true,
+                "location": {
+                  "start": {
+                    "lineNumber": 17,
+                    "columnNumber": 9
+                  },
+                  "end": {
+                    "lineNumber": 17,
+                    "columnNumber": 9
+                  }
+                }
+              },
+              "includeInSummary": {
+                "value": false,
+                "location": null
+              },
+              "modifier": {
+                "value": false,
+                "location": null
+              },
+              "normative": {
+                "value": false,
+                "location": null
+              },
+              "trialUse": {
+                "value": false,
+                "location": null
+              },
+              "draft": {
+                "value": false,
+                "location": null
+              }
+            }
+          },
+          {
+            "Elements": [
+              {
+                "value": "name",
+                "location": {
+                  "start": {
+                    "lineNumber": 17,
+                    "columnNumber": 12
+                  },
+                  "end": {
+                    "lineNumber": 18,
+                    "columnNumber": 7
+                  }
+                }
+              }
+            ],
+            "Flags": {
+              "mustSupport": {
+                "value": true,
+                "location": {
+                  "start": {
+                    "lineNumber": 18,
+                    "columnNumber": 7
+                  },
+                  "end": {
+                    "lineNumber": 18,
+                    "columnNumber": 7
+                  }
+                }
+              },
+              "includeInSummary": {
+                "value": false,
+                "location": null
+              },
+              "modifier": {
+                "value": false,
+                "location": null
+              },
+              "normative": {
+                "value": false,
+                "location": null
+              },
+              "trialUse": {
+                "value": false,
+                "location": null
+              },
+              "draft": {
+                "value": false,
+                "location": null
+              }
+            }
+          },
+          {
+            "Elements": [
+              {
+                "value": "type",
+                "location": {
+                  "start": {
+                    "lineNumber": 18,
+                    "columnNumber": 10
+                  },
+                  "end": {
+                    "lineNumber": 19,
+                    "columnNumber": 7
+                  }
+                }
+              }
+            ],
+            "Flags": {
+              "mustSupport": {
+                "value": true,
+                "location": {
+                  "start": {
+                    "lineNumber": 19,
+                    "columnNumber": 7
+                  },
+                  "end": {
+                    "lineNumber": 19,
+                    "columnNumber": 7
+                  }
+                }
+              },
+              "includeInSummary": {
+                "value": false,
+                "location": null
+              },
+              "modifier": {
+                "value": false,
+                "location": null
+              },
+              "normative": {
+                "value": false,
+                "location": null
+              },
+              "trialUse": {
+                "value": false,
+                "location": null
+              },
+              "draft": {
+                "value": false,
+                "location": null
+              }
+            }
+          },
+          {
+            "Elements": [
+              {
+                "value": "telecom",
+                "location": {
+                  "start": {
+                    "lineNumber": 19,
+                    "columnNumber": 10
+                  },
+                  "end": {
+                    "lineNumber": 20,
+                    "columnNumber": 10
+                  }
+                }
+              }
+            ],
+            "Flags": {
+              "mustSupport": {
+                "value": true,
+                "location": {
+                  "start": {
+                    "lineNumber": 20,
+                    "columnNumber": 10
+                  },
+                  "end": {
+                    "lineNumber": 20,
+                    "columnNumber": 10
+                  }
+                }
+              },
+              "includeInSummary": {
+                "value": false,
+                "location": null
+              },
+              "modifier": {
+                "value": false,
+                "location": null
+              },
+              "normative": {
+                "value": false,
+                "location": null
+              },
+              "trialUse": {
+                "value": false,
+                "location": null
+              },
+              "draft": {
+                "value": false,
+                "location": null
+              }
+            }
+          },
+          {
+            "Elements": [
+              {
+                "value": "address",
+                "location": {
+                  "start": {
+                    "lineNumber": 20,
+                    "columnNumber": 13
+                  },
+                  "end": {
+                    "lineNumber": 21,
+                    "columnNumber": 10
+                  }
+                }
+              }
+            ],
+            "Flags": {
+              "mustSupport": {
+                "value": true,
+                "location": {
+                  "start": {
+                    "lineNumber": 21,
+                    "columnNumber": 10
+                  },
+                  "end": {
+                    "lineNumber": 21,
+                    "columnNumber": 10
+                  }
+                }
+              },
+              "includeInSummary": {
+                "value": false,
+                "location": null
+              },
+              "modifier": {
+                "value": false,
+                "location": null
+              },
+              "normative": {
+                "value": false,
+                "location": null
+              },
+              "trialUse": {
+                "value": false,
+                "location": null
+              },
+              "draft": {
+                "value": false,
+                "location": null
+              }
+            }
+          },
+          {
+            "Elements": [
+              {
+                "value": "managingOrganization",
+                "location": {
+                  "start": {
+                    "lineNumber": 21,
+                    "columnNumber": 13
+                  },
+                  "end": {
+                    "lineNumber": 22,
+                    "columnNumber": 23
+                  }
+                }
+              }
+            ],
+            "Flags": {
+              "mustSupport": {
+                "value": true,
+                "location": {
+                  "start": {
+                    "lineNumber": 22,
+                    "columnNumber": 23
+                  },
+                  "end": {
+                    "lineNumber": 22,
+                    "columnNumber": 23
+                  }
+                }
+              },
+              "includeInSummary": {
+                "value": false,
+                "location": null
+              },
+              "modifier": {
+                "value": false,
+                "location": null
+              },
+              "normative": {
+                "value": false,
+                "location": null
+              },
+              "trialUse": {
+                "value": false,
+                "location": null
+              },
+              "draft": {
+                "value": false,
+                "location": null
+              }
+            }
+          }
+        ],
+        "bindingRules": null,
+        "assignmentRules": null,
+        "containsRules": null,
+        "typeRules": null,
+        "obeysRules": null,
+        "caretValueRules": [
+          {
+            "element": {
+              "value": "contact.name",
+              "location": {
+                "start": {
+                  "lineNumber": 12,
+                  "columnNumber": 2
+                },
+                "end": {
+                  "lineNumber": 12,
+                  "columnNumber": 2
+                }
+              }
+            },
+            "elementInProfile": null,
+            "value": {
+              "value": "system:ingestion",
+              "location": {
+                "start": {
+                  "lineNumber": 12,
+                  "columnNumber": 18
+                },
+                "end": {
+                  "lineNumber": 12,
+                  "columnNumber": 18
+                }
+              }
+            }
+          },
+          {
+            "element": {
+              "value": "contact.telecom[0].system",
+              "location": {
+                "start": {
+                  "lineNumber": 13,
+                  "columnNumber": 2
+                },
+                "end": {
+                  "lineNumber": 13,
+                  "columnNumber": 2
+                }
+              }
+            },
+            "elementInProfile": null,
+            "value": {
+              "value": "#url",
+              "location": {
+                "start": {
+                  "lineNumber": 13,
+                  "columnNumber": 31
+                },
+                "end": {
+                  "lineNumber": 13,
+                  "columnNumber": 31
+                }
+              }
+            }
+          },
+          {
+            "element": {
+              "value": "contact.telecom[=].value",
+              "location": {
+                "start": {
+                  "lineNumber": 14,
+                  "columnNumber": 2
+                },
+                "end": {
+                  "lineNumber": 14,
+                  "columnNumber": 2
+                }
+              }
+            },
+            "elementInProfile": null,
+            "value": {
+              "value": "$IngestionSystemUrl",
+              "location": {
+                "start": {
+                  "lineNumber": 14,
+                  "columnNumber": 30
+                },
+                "end": {
+                  "lineNumber": 14,
+                  "columnNumber": 30
+                }
+              }
+            }
+          },
+          {
+            "element": {
+              "value": "slicing.discriminator.type",
+              "location": {
+                "start": {
+                  "lineNumber": 28,
+                  "columnNumber": 13
+                },
+                "end": {
+                  "lineNumber": 28,
+                  "columnNumber": 13
+                }
+              }
+            },
+            "elementInProfile": {
+              "value": "identifier",
+              "location": {
+                "start": {
+                  "lineNumber": 28,
+                  "columnNumber": 2
+                },
+                "end": {
+                  "lineNumber": 28,
+                  "columnNumber": 2
+                }
+              }
+            },
+            "value": {
+              "value": "#value",
+              "location": {
+                "start": {
+                  "lineNumber": 28,
+                  "columnNumber": 43
+                },
+                "end": {
+                  "lineNumber": 28,
+                  "columnNumber": 43
+                }
+              }
+            }
+          },
+          {
+            "element": {
+              "value": "slicing.discriminator.path",
+              "location": {
+                "start": {
+                  "lineNumber": 29,
+                  "columnNumber": 13
+                },
+                "end": {
+                  "lineNumber": 29,
+                  "columnNumber": 13
+                }
+              }
+            },
+            "elementInProfile": {
+              "value": "identifier",
+              "location": {
+                "start": {
+                  "lineNumber": 29,
+                  "columnNumber": 2
+                },
+                "end": {
+                  "lineNumber": 29,
+                  "columnNumber": 2
+                }
+              }
+            },
+            "value": {
+              "value": "system",
+              "location": {
+                "start": {
+                  "lineNumber": 29,
+                  "columnNumber": 43
+                },
+                "end": {
+                  "lineNumber": 29,
+                  "columnNumber": 43
+                }
+              }
+            }
+          },
+          {
+            "element": {
+              "value": "slicing.rules",
+              "location": {
+                "start": {
+                  "lineNumber": 30,
+                  "columnNumber": 13
+                },
+                "end": {
+                  "lineNumber": 30,
+                  "columnNumber": 13
+                }
+              }
+            },
+            "elementInProfile": {
+              "value": "identifier",
+              "location": {
+                "start": {
+                  "lineNumber": 30,
+                  "columnNumber": 2
+                },
+                "end": {
+                  "lineNumber": 30,
+                  "columnNumber": 2
+                }
+              }
+            },
+            "value": {
+              "value": "#open",
+              "location": {
+                "start": {
+                  "lineNumber": 30,
+                  "columnNumber": 30
+                },
+                "end": {
+                  "lineNumber": 30,
+                  "columnNumber": 30
+                }
+              }
+            }
+          },
+          {
+            "element": {
+              "value": "slicing.description",
+              "location": {
+                "start": {
+                  "lineNumber": 31,
+                  "columnNumber": 13
+                },
+                "end": {
+                  "lineNumber": 31,
+                  "columnNumber": 13
+                }
+              }
+            },
+            "elementInProfile": {
+              "value": "identifier",
+              "location": {
+                "start": {
+                  "lineNumber": 31,
+                  "columnNumber": 2
+                },
+                "end": {
+                  "lineNumber": 31,
+                  "columnNumber": 2
+                }
+              }
+            },
+            "value": {
+              "value": "Identifier from third party source",
+              "location": {
+                "start": {
+                  "lineNumber": 31,
+                  "columnNumber": 36
+                },
+                "end": {
+                  "lineNumber": 31,
+                  "columnNumber": 36
+                }
+              }
+            }
+          },
+          {
+            "element": {
+              "value": "slicing.ordered",
+              "location": {
+                "start": {
+                  "lineNumber": 32,
+                  "columnNumber": 13
+                },
+                "end": {
+                  "lineNumber": 32,
+                  "columnNumber": 13
+                }
+              }
+            },
+            "elementInProfile": {
+              "value": "identifier",
+              "location": {
+                "start": {
+                  "lineNumber": 32,
+                  "columnNumber": 2
+                },
+                "end": {
+                  "lineNumber": 32,
+                  "columnNumber": 2
+                }
+              }
+            },
+            "value": {
+              "value": "false",
+              "location": {
+                "start": {
+                  "lineNumber": 32,
+                  "columnNumber": 32
+                },
+                "end": {
+                  "lineNumber": 32,
+                  "columnNumber": 32
+                }
+              }
+            }
+          }
+        ],
+        "insertRules": null,
+        "pathRules": null
+      }
+    }
+  ],
+  "codeSystems": null
+}
