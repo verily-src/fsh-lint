@@ -37,6 +37,11 @@ The linter can be run from the command line. The basic usage is:
 fsh-lint --paths path/to/YourFile.fsh
 ```
 
+Or over all fsh files in the `input/fsh` directory:
+```bash
+find input/fsh -name "*.fsh" -exec fsh-lint --paths {} \;
+```
+
 Automatic fixes are available for some rules as well, which can be applied with
 the `--fix` flag:
 
